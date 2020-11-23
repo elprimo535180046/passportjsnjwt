@@ -8,36 +8,32 @@
       </h5>
       <%- include ("partials/messages"); %>
       <br />
-      <form action="/auth/login" method="post">
+      <form action="/users/login" method="POST">
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="email">Email</label>
           <input
-            type="text"
+            type="email"
+            id="email"
+            name="email"
             class="form-control"
-            name="username"
-            required
-            autofocus
+            placeholder="Enter Email"
           />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
           <input
             type="password"
-            class="form-control"
+            id="password"
             name="password"
-            required
+            class="form-control"
+            placeholder="Enter Password"
           />
         </div>
-        <input
-          type="submit"
-          class="btn btn-success"
-          name="submit"
-          value="Login"
-        />
-        <% if (locals.error) { %>
-        <span class="text-danger pl-2"><%= error %></span>
-        <% } %>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
       </form>
+      <p class="lead mt-4">
+        No Account? <a href="/users/register">Register</a>
+      </p>
     </div>
   </div>
 </div>
