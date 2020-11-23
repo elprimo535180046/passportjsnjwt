@@ -2,9 +2,11 @@
   <div class="card">
     <div class="card-body">
       <h1 class="card-title">Member Login</h1>
+
       <h5 class="card-subtitle mb-2 text-muted">
         Use your credentials to access this system.
       </h5>
+      <%- include ("partials/messages"); %>
       <br />
       <form action="/auth/login" method="post">
         <div class="form-group">
